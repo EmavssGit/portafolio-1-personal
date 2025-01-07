@@ -1,120 +1,49 @@
-/* Fondo con degradado borroso */
+/* General */
 body {
-  font-family: 'Poppins', sans-serif;
   margin: 0;
-  padding: 0;
-  background: linear-gradient(135deg, #1f1f1f, #3a3a3a);
-  height: 100vh;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(145deg, #0d0d0d, #1f1f1f);
+  color: #fff;
+}
+
+/* Header y botón del menú */
+.menu-container {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  color: white;
-  overflow: hidden;
-  position: relative;
+  justify-content: flex-start;
+  padding: 20px;
+  position: relative; /* Aseguramos que el botón esté en una posición relativa para ajustes */
+  z-index: 10; /* Aseguramos que el botón esté encima del menú */
 }
 
-body::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(135deg, rgba(0, 255, 170, 0.2), rgba(0, 255, 170, 0.05));
-  filter: blur(15px);
-  z-index: -1;
-}
-
-/* Estilo de la tarjeta */
-.card {
-  background: rgba(0, 0, 0, 0.8);
-  padding: 20px 30px;
-  border-radius: 15px;
-  box-shadow: 0 10px 30px rgba(0, 255, 170, 0.3);
-  text-align: center;
-  max-width: 400px;
-  width: 90%;
-  margin: 20px;
-}
-
-/* Estilos de texto en tarjetas */
-.card-header h1 {
-  font-size: 2rem;
-  margin: 0;
-  color: #00ffaa;
-}
-
-.card-header p {
-  font-size: 1.2rem;
-  font-weight: 300;
-  color: #cfcfcf;
-}
-
-.card-body {
-  margin: 15px 0;
-  font-size: 1rem;
-  line-height: 1.6;
-}
-
-.card-footer {
-  display: flex;
-  justify-content: center;
-  gap: 15px;
-}
-
-/* Íconos sociales */
-.social-icon {
-  text-decoration: none;
-  color: #00ffaa;
-  font-weight: 500;
-  padding: 10px 15px;
-  border: 1px solid #00ffaa;
-  border-radius: 5px;
-  transition: all 0.3s ease;
-}
-
-.social-icon:hover {
-  background: #00ffaa;
-  color: #000;
-}
-
-/* Contenedor de la barra de navegación */
-.navbar-container {
-  position: fixed;
-  top: 10px;
-  left: 10px;
-  z-index: 10;
-}
-
-/* Botón de alternancia */
-.navbar-toggle {
-  background: #00ffaa;
+.menu-toggle {
+  background-color: #00ffaa;
   color: #000;
   border: none;
-  padding: 10px 15px;
   border-radius: 5px;
-  font-size: 1.2rem;
+  padding: 10px 20px;
+  font-size: 1rem;
   cursor: pointer;
   transition: all 0.3s ease;
+  position: relative; /* Se mantiene accesible */
 }
 
-.navbar-toggle:hover {
-  background: #000;
-  color: #00ffaa;
-  border: 1px solid #00ffaa;
+.menu-toggle:hover {
+  background-color: #008866;
+  color: #fff;
 }
 
-/* Estilos de la barra de navegación */
+/* Barra de navegación */
 .navbar {
   position: fixed;
-  top: 50px;
-  left: -250px;
-  width: 200px;
-  background: rgba(0, 0, 0, 0.9);
-  box-shadow: 0 4px 10px rgba(0, 255, 170, 0.3);
-  border-radius: 10px;
-  padding: 20px;
-  transition: all 0.3s ease;
+  top: 0;
+  left: -100%;
+  width: 250px;
+  height: 100%;
+  background-color: #000;
+  padding-top: 50px;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+  transition: left 0.3s ease;
+  z-index: 5; /* Colocamos el menú debajo del botón */
 }
 
 .navbar ul {
@@ -123,48 +52,51 @@ body::before {
   margin: 0;
 }
 
-/* Ajustes en los botones del menú */
 .navbar ul li {
-  margin: 10px 0;
+  margin: 15px 0;
 }
 
 .navbar ul li a {
   text-decoration: none;
   color: #00ffaa;
-  font-weight: 500;
-  padding: 10px 15px;
-  border: 1px solid #00ffaa;
-  border-radius: 10px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 10px 20px;
   display: block;
-  text-align: center;
-  transition: all 0.3s ease;
+  transition: background 0.3s ease, color 0.3s ease;
 }
 
 .navbar ul li a:hover {
-  background: #00ffaa;
+  background-color: #00ffaa;
   color: #000;
-  transform: scale(1.05);
+  border-radius: 5px;
 }
 
-/* Estilos responsivos */
-@media (max-width: 768px) {
-  body {
-      flex-direction: column;
-      justify-content: flex-start;
-  }
 
-  .card {
-      width: 95%;
-      max-width: 100%;
-  }
+/* Sección de presentación */
+.presentation {
+  margin: 50px auto;
+  padding: 20px;
+  max-width: 800px;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.8); /* Fondo semi-transparente */
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  color: #00ffaa; /* Color del texto */
+}
 
-  .navbar {
-      width: 100%;
-      left: 0;
-      top: 60px;
-  }
+.presentation h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #00ffaa;
+}
 
-  .navbar ul li {
-      margin: 5px 0;
-  }
+.presentation p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: #cfcfcf; /* Texto más claro */
+}
+
+.presentation p:hover {
+  color: #00ffaa; /* Color animado al pasar el ratón */
 }
