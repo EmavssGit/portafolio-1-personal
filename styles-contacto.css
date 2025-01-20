@@ -1,0 +1,118 @@
+/* Estilos Generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom, #0f2027, #203a43, #2c5364);
+    color: #00ffaa;
+  }
+  
+  .header {
+    background-color: #121212;
+    padding: 10px;
+  }
+  
+  .navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+  }
+  
+  .navbar a {
+    text-decoration: none;
+    color: #00ffaa;
+    padding: 10px 15px;
+    border: 1px solid #00ffaa;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+  }
+  
+  .navbar a:hover {
+    background-color: #00ffaa;
+    color: #121212;
+  }
+  
+  /* Mensaje de mejora */
+  .mensaje {
+    text-align: center;
+    margin: 40px auto;
+    padding: 20px;
+    max-width: 800px;
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 255, 170, 0.2);
+  }
+  
+  .mensaje h1 {
+    font-size: 2.5rem;
+    color: #00ffaa;
+  }
+  
+  .mensaje p {
+    font-size: 1.2rem;
+    color: #cfcfcf;
+  }
+  
+  /* Redes de contacto */
+  .redes {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: 20px auto;
+    padding: 20px;
+  }
+  
+  .icono {
+    text-decoration: none;
+    color: #00ffaa;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 15px;
+    border: 1px solid #00ffaa;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+  }
+  
+  .icono:hover {
+    background: #00ffaa;
+    color: #121212;
+  }
+  
+  .icono i {
+    font-size: 1.5rem;
+  }
+  
+  /* Footer */
+  footer {
+    text-align: center;
+    padding: 20px;
+    background: #121212;
+    color: #cfcfcf;
+    font-size: 0.9rem;
+  }
+  
+  /* Responsividad */
+  @media (max-width: 768px) {
+    .mensaje h1 {
+      font-size: 2rem;
+    }
+  
+    .mensaje p {
+      font-size: 1rem;
+    }
+  
+    .icono {
+      font-size: 1rem;
+      gap: 5px;
+    }
+  
+    .icono i {
+      font-size: 1.2rem;
+    }
+  }
+  

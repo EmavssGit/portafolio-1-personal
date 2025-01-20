@@ -10,3 +10,10 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 });
+
+
+
+document.getElementById('btnCertificadoPDF').addEventListener('click', function () {
+  const certificadoPDF = document.getElementById('certificadoPDF');
+  certificadoPDF.classList.toggle('hidden');
+});
